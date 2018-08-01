@@ -40,6 +40,8 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'test-unit'
   gem 'rspec-rails'
+  gem 'guard-rspec'
+  gem 'guard-spork'
 end
 
 group :development do
