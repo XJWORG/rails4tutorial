@@ -1,7 +1,8 @@
+<% provide(:title ,'About') %>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>StaticPages#About</title>
+    <title>StaticPages#<%= yield(:title) %></title>
 </head>
 <body>
     <h1>About Us</h1>
