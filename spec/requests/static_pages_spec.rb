@@ -16,11 +16,11 @@ describe "StaticPages" do
 
   describe "Help Page" do
     it "should have the content 'Help'" do
-        visit '/static_pages/help'
+        visit help_path
         expect(page).to have_content('Help')
     end
     it "should have the title 'Help'" do
-        visit '/static_pages/help'
+        visit help_path
         expect(page).to have_title('StaticPages#Help')
     end
   end
