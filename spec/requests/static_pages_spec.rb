@@ -32,7 +32,7 @@ describe "StaticPages" do
     end
     it "should have the title 'About'" do
         visit '/static_pages/about'
-        expect(page).to have_title('StaticPages#About')
+        expect(page).to have_title('StaticPages#About') 
     end
   end
 
