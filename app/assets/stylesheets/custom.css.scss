@@ -73,7 +73,7 @@ text-decoration: none;
 footer {
 margin-top: 45px;
 padding-top: 5px;
-border-top: 1px soli;
+border-top: 1px solid $grayMediumLight;
 color: #999;
 }
 footer a {
@@ -117,10 +117,10 @@ margin-top: 45px;
 aside {
 section {
 padding: 10px 0;
-border-top: 1px solid;
+border-top: 1px solid $grayLighter;
 &:first-child {
 border: 0;
-padding-top: 0;
+padding-top: 10;
 }
 span {
 display: block;
@@ -132,7 +132,7 @@ font-size: 1.4em;
 text-align: left;
 letter-spacing: -1px;
 margin-bottom: 3px;
-margin-top: 0px;
+margin-top: 12px;
 }
 }
 }
