@@ -31,7 +31,7 @@ describe "AuthenticationPages" do
         it {should have_link("Profile" , href:  user_path(user))}
         it {should have_link("Sign out" , href: signout_path)}
         it {should_not have_link("Sign in" , href: signin_path)}
-        it {should have_selector?("div.alert.alert-success" , text: "Welcome")}
+        it {should have_selector("div.alert.alert-success" , text: "Welcome")}
     end
 
     describe "error-alert disappear after visit another page" do
