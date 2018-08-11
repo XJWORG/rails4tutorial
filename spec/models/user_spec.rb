@@ -11,6 +11,7 @@ describe User do
   it {should respond_to(:password_confirmation)}
   it {should respond_to(:password_digest)}
   it {should respond_to(:authenticate)}
+  it {should respond_to(:remember_token)}
   it {should be_valid}
 
   describe "when name is not present" do
@@ -93,5 +94,12 @@ describe User do
     it  {should be_invalid}
 
   end
+
+  # describe " remember_token should not be blank" do
+  #   before { @user.save }
+  #   its (:remember_token) {should_not be_blank }
+  #   # 上述等同于 it { expect(@user.remember_token).not_to be_blank } 
+  # end
+
   
 end
