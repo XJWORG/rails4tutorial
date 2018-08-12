@@ -16,6 +16,7 @@ describe "AuthenticationPages" do
         before {click_button "Sign in"}
         it { should have_title("Sign in")}
         it { should have_selector("div.alert.alert-error" , text: "Invalid")}
+
     end
 
 
@@ -32,6 +33,10 @@ describe "AuthenticationPages" do
         it {should have_link("Sign out" , href: signout_path)}
         it {should_not have_link("Sign in" , href: signin_path)}
         it {should have_selector("div.alert.alert-success" , text: "Welcome")}
+        describe "followed by signout" do
+            before { click_link "Sign out"}
+            it { should have_link("Sign in")}
+        end
     end
 
     describe "error-alert disappear after visit another page" do
