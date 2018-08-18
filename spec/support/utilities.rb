@@ -1,5 +1,5 @@
 require 'spec_helper'
-
+    
     # def sign_in(user, options={})
     #     if options[:no_capybara]
     #         remember_token = User.new_remember_token
