@@ -9,5 +9,9 @@ FactoryGirl.define do
         password "fullcase"
         password_confirmation "fullcase"
 
+        factory :admin do
+            admin true
+        end
+
     end
 end
