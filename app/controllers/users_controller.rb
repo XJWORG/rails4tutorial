@@ -27,4 +27,13 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(user_params)
+      # to do handle a successful udapte
+    else
+      render "edit"
+    end
+  end
+
 end
