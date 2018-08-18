@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :signed_in_user , only: [:edit, :update]
 
   def new
     @user = User.new
@@ -37,6 +38,10 @@ class UsersController < ApplicationController
     else
       render "edit"
     end
+  end
+
+  def signed_in_user
+    redirect_to signin_url, notice: "Please sign in." unless sign_in?
   end
 
 end
