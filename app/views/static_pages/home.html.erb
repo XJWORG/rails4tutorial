@@ -6,7 +6,7 @@
 </head>
 <body>
     <% if sign_in? %>
-        <div>
+        <div class="row">
         <aside class="span4">
             <section>
                 <%= render "shared/user_info"%>
@@ -15,6 +15,11 @@
                 <%= render "shared/micropost_form"%>
             </section>
         </aside>
+        <div class="span8">
+            <h3>Micropost Feed</h3>
+            <%= render "shared/feed" %>
+        </div>
+
         </div>
     <% else %>
 
