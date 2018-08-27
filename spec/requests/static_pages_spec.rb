@@ -2,6 +2,8 @@ require 'spec_helper'
 
 describe "StaticPages" do
 
+  # it 的主语就是subject，这里如果没有标记，直接使用it会报错
+  subject { page }
 
   describe "Home Page" do
     it "should have the content 'Sample App'" do
