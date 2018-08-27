@@ -10,12 +10,16 @@ describe RelationshipsController do
 
         it "should increment the Relationship count" do
             expect do
-                xhr :post, :create, relationship: { followed_id: other_user.id }
+                # xhr :post, :create, relationship: { followed_id: other_user.id }
+                post :create, params: {relationship: { followed_id: other_user.id }}, xhr: true
             end.to change(Relationship, :count).by(1)
         end
 
         it "should respond with success" do
-            xhr :post, :create, relationship: { followed_id: other_user.id }
+            # 这是老版本的ajax方法测试
+            # xhr :post, :create, relationship: { followed_id: other_user.id }
+            # 需要使用这个版本的ajax测试
+            post :create, params: {relationship: { followed_id: other_user.id }}, xhr:true
             expect(response).to be_success
         end
 
@@ -27,12 +31,14 @@ describe RelationshipsController do
 
         it "should decrement the Relationship count" do
             expect do
-                xhr :delete, :destroy, id: relationship.id
+                # xhr :delete, :destroy, id: relationship.id
+                delete :destroy, params: {id: relationship.id}, xhr: true
             end.to change(Relationship, :count).by(-1)
         end
 
         it "should respond with success" do
-            xhr :delete, :destroy, id: relationship.id
+            # xhr :delete, :destroy, id: relationship.id
+            delete :destroy, params: {id: relationship.id}, xhr: true
             expect(response).to be_success
         end
     end
