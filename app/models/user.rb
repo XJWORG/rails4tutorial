@@ -25,7 +25,8 @@ class User < ApplicationRecord
 
     def feed
         # this is preliminary .  See "Following users" for the full implementation.
-        Micropost.where("user_id=?", id)
+        # Micropost.where("user_id=?", id)
+        Micropost.from_users_followed_by(self)
     end
 
     def following?(other_user)
